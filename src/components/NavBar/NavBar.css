@@ -1,0 +1,21 @@
+
+.hero {
+    background-color: #9BE8D8;
+}
+
+.hero-body {
+    height: 30vh;
+    padding-top: 0!important;
+}
+
+.title {
+    font-family: 'Agbalumo';
+    color: #e8e0c6dd !important;
+    -webkit-text-stroke: 0.2px rgba(160, 103, 39, 0.81);
+    text-shadow: rgba(128, 128, 128, 0.437) 1px 3px ;
+}
+
+.button{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px!important;
+}

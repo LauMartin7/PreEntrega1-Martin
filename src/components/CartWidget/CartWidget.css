@@ -1,0 +1,20 @@
+
+.numeroCarrito{
+    margin-left: 10px;
+    background-color: whitesmoke;
+    padding: 1.5px 5px;
+    border-radius: 25px;
+    border: solid 1px grey;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.carrito{
+    color:aliceblue;
+}
+
+.imgCarrito{
+    width:80px;
+    background-color: #E2F6CA;
+    padding: 8px 3px 6px 8px;
+    border-radius: 10px;
+}
