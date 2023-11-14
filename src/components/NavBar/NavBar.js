@@ -1,16 +1,17 @@
-import CartWidget from "../CartWidget/CartWidget";
-import logo from './assets/logo.png';
+import CartWidget from '../CartWidget/CartWidget';
 import "./NavBar.css";
 
-const NavBar = () => {
+
+const NavBar = ({img}) => {
+    
     return (
         <nav className="hero is-small">
             <div className="hero-body columns is-vcentered">
                     <div className="column is-1">
-                        <img src={logo} alt="logo"/>
+                        <img src={img} alt="logo"/>
                     </div>
                     <div className="column is-2">
-                        <h2 className="title is-2">Babyland</h2>
+                        <h2 className="title is-1">Babyland</h2>
                     </div>
                     <div className="column"></div>
                     <div className="column">

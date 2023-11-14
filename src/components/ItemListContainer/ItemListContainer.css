@@ -1,6 +1,6 @@
 
 .mensaje{
-    background-image: url(./assets/fondoAnimalitos.jpg);
+    background-image: url(/src/img/fondoAnimalitos.jpg);
     background-size: cover;
     height: 600px;
 }
