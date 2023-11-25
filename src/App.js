@@ -4,15 +4,21 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import "bulma/css/bulma.css";
 import logoNavBar from "./img/logo.png";
 import babyItemLC from "./img/baby.jpg";
-
-
-
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <NavBar img={logoNavBar}/>
-      <ItemListContainer img={babyItemLC} greeting='Bienvenidos al sitio donde encontrarás todo para tu bebé'/>
+      <BrowserRouter>
+        <NavBar img={logoNavBar}/>
+        <Routes>
+          <Route path="/" element={<ItemListContainer imgB={babyItemLC} greeting='Bienvenidos al sitio donde encontrarás todo para tu bebé' oferta='30% de descuento EFECTIVO/TRANSFERENCIA'/>}/>
+          <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+          <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
+          <Route path="*" element={<h1>404 NOT FOUND</h1>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

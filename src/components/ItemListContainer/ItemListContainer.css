@@ -1,17 +1,43 @@
 
-.mensaje{
+.contenedor{
     background-image: url(/src/img/fondoAnimalitos.jpg);
     background-size: cover;
-    height: 600px;
+    background-repeat: repeat;
 }
+
 .subtitle {
     font-family: 'Courgette' , cursive;
     font-size: 50px;
     text-align: center;
-    text-shadow: rgba(128, 128, 128, 0.543) 1px 2px ;
+    text-shadow: rgba(128, 128, 128, 0.543) 1px 1.2px ;
 }
 
 .notification{
-    color: #9BE8D8!important;
+    color: #9aded0!important;
     border-radius: 50px!important;
+}
+
+
+.oferta{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mensaje{
+    overflow: hidden;
+}
+
+.animation{
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    animation-iteration-count:initial;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 70%;
+    }
+
+    to {
+        margin-left: 25%;
+    }
 }

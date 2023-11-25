@@ -1,6 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget';
 import "./NavBar.css";
-
+import {Link} from "react-router-dom";
 
 const NavBar = ({img}) => {
     
@@ -10,25 +10,25 @@ const NavBar = ({img}) => {
                     <div className="column is-1">
                         <img src={img} alt="logo"/>
                     </div>
-                    <div className="column is-2">
+                    <Link to="/" className="column is-2">
                         <h2 className="title is-1">Babyland</h2>
-                    </div>
+                    </Link>
                     <div className="column"></div>
-                    <div className="column">
-                        <button className="button is-primary is-light">Cochecitos</button>
-                    </div>
-                    <div className="column">
-                        <button className="button is-primary is-light">Juguetes</button>
-                    </div>
-                    <div className="column is-narrow">
-                        <button className="button is-primary is-light">Cunas</button>
-                    </div>
-                    <div className="column">
-                        <button className="button is-primary is-light">Alimentación</button>
-                    </div>
-                    <div className="column">
-                        <button className="button is-primary is-light">Butacas</button>
-                    </div>
+                    <ul className="column">
+                        <li className="button is-primary is-light"><a className="textoMenu" href="#top">Coches</a></li>
+                    </ul>
+                    <ul className="column">
+                        <li className="button is-primary is-light"><a className="textoMenu" href="#top">Juguetes</a></li>
+                    </ul>
+                    <ul className="column is-narrow">
+                        <li className="button is-primary is-light"> <a className="textoMenu" href="#top">Cunas</a></li>
+                    </ul>
+                    <ul className="column">
+                        <li className="button is-primary is-light"><a className="textoMenu" href="#top">Alimentación</a></li>
+                    </ul>
+                    <ul className="column">
+                        <li className="button is-primary is-light"><a className="textoMenu" href="#top">Indumentaria</a></li>
+                    </ul>
                     <div className="column"></div>
                     <div className="column">
                         <CartWidget/>

@@ -1,6 +1,6 @@
 
 .hero {
-    background-color: #9BE8D8;
+    background-color: #D5FFE4;
 }
 
 .hero-body {
@@ -15,6 +15,15 @@
 }
 
 .button{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 500;
     border-radius: 20px!important;
+    box-shadow: 30px -16px cadetblue;
+    background-color: white!important;
+    padding: 25px!important;
+}
+
+.textoMenu{
+    color:  #66a096;
 }
