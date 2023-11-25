@@ -25,11 +25,11 @@ const ItemListContainer = ({ greeting, imgB, oferta }) => {
     return (
         <div className="contenedor">
             <div className="mensaje columns is-vcentered">
-                <div className="column animation is-3 notification is-primary is-light is-offset-3">
+                <div className="column animation is-4 notification is-primary is-light is-offset-3">
                     <h1 className="subtitle is-3">{greeting}</h1>
                     <h1 className="oferta subtitle is-3">{oferta}</h1>
                 </div>
-                <figure className="column image is-4 is-by1">
+                <figure className="column image is-2">
                     <img className="is-rounded" src={imgB} alt="logo"/>
                 </figure>
             </div>

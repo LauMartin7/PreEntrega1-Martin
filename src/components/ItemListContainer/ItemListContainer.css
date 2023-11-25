@@ -6,7 +6,8 @@
 }
 
 .subtitle {
-    font-family: 'Courgette' , cursive;
+    font-family: 'Courgette';
+    font-style: normal;
     font-size: 50px;
     text-align: center;
     text-shadow: rgba(128, 128, 128, 0.543) 1px 1.2px ;
@@ -22,7 +23,6 @@
 }
 
 .mensaje{
-    overflow: hidden;
     padding-top: 100px!important;
 }
 
