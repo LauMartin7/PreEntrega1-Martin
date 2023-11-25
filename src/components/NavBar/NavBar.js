@@ -1,6 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget';
 import "./NavBar.css";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const NavBar = ({img}) => {
     
@@ -13,7 +13,23 @@ const NavBar = ({img}) => {
                     <Link to="/" className="column is-2">
                         <h2 className="title is-1">Babyland</h2>
                     </Link>
-                    <div className="column"></div>
+                    <div className="column categories">
+                        <li className="column button is-primary is-light">
+                            <NavLink to={`/category/Coches`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Coches</NavLink> 
+                        </li>
+                        <li className="column button is-primary is-light">
+                            <NavLink to={`/category/Juguetes`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option' }>Juguetes</NavLink>
+                        </li>
+                        <li className="column button is-primary is-light">
+                            <NavLink to={`/category/Cunas`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option' }>Cunas</NavLink>
+                        </li>
+                        <li className=" column button is-primary is-light">
+                            <NavLink to={`/category/Alimentacion`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option' }>Alimentacion</NavLink>
+                        </li>
+                        <li className="column button is-primary is-light">
+                            <NavLink to={`/category/Indumentaria`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option' }>Indumentaria</NavLink>
+                        </li>
+                    </div>
                     <ul className="column">
                         <li className="button is-primary is-light"><a className="textoMenu" href="#top">Coches</a></li>
                     </ul>
@@ -30,6 +46,7 @@ const NavBar = ({img}) => {
                         <li className="button is-primary is-light"><a className="textoMenu" href="#top">Indumentaria</a></li>
                     </ul>
                     <div className="column"></div>
+
                     <div className="column">
                         <CartWidget/>
                     </div>
