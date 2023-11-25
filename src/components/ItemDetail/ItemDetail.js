@@ -1,11 +1,11 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({id, name, img, category, description, price, stock }) => {
+const ItemDetail = ({ name, img, category, description, price, stock }) => {
 
     return(
-        <div className='card columns'>
-            <div className='column is-3 is-offset-5'>
+        <div className=' itemDetail columns'>
+            <div className='card column is-3 is-offset-5'>
                 <header className='card-header'>
                     <h2 className='card-header-title'>
                         {name}

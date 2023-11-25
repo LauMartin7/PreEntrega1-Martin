@@ -1,3 +1,9 @@
+.item{
+    width: 400px!important;
+    border-radius: 20px!important;
+}
+
+
 .card-header-title{
     font-size: 20px;
     color: azure !important;;

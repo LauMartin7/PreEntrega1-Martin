@@ -33,7 +33,7 @@ const ItemListContainer = ({ greeting, imgB, oferta }) => {
                     <img className="is-rounded" src={imgB} alt="logo"/>
                 </figure>
             </div>
-            <div>
+            <div className="productosTodos">
                 <ItemList products={products}/>
             </div>
         </div>

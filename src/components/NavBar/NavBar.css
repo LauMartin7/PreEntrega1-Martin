@@ -16,14 +16,19 @@
 
 .button{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
-    font-weight: 500;
+    font-size: 19px!important;
     border-radius: 20px!important;
     box-shadow: 30px -16px cadetblue;
     background-color: white!important;
     padding: 25px!important;
+    width: 170px;
 }
 
-.textoMenu{
-    color:  #66a096;
+nav div ul li a{
+    color: #66a096!important;
+}
+
+.ActiveOption{
+    font-size: 20px;
+    color: rgb(88, 87, 87)!important;
 }

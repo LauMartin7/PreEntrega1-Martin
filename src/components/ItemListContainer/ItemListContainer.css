@@ -17,13 +17,13 @@
     border-radius: 50px!important;
 }
 
-
 .oferta{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .mensaje{
     overflow: hidden;
+    padding-top: 100px!important;
 }
 
 .animation{
@@ -40,4 +40,9 @@
     to {
         margin-left: 25%;
     }
+}
+
+.productosTodos{
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
