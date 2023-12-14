@@ -1,4 +1,4 @@
-
+/*
 const products =[
     {id: '1',
     name: 'Moisés blanco y negro',
@@ -162,6 +162,7 @@ const products =[
     }
 ]
 
+
 export const getProducts = () => {
     return new Promise ((resolve) =>{
         setTimeout(() => {
@@ -186,3 +187,4 @@ export const getProductsByCategory = (categoryId) => {
     })
 
 }
+*/
