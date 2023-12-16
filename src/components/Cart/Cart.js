@@ -20,7 +20,8 @@ const Cart = ()=> {
 
     return(
         <div className='card-footer'> 
-            { cart.map(p => <CartItem key={p.id} {...p}/>) }
+            
+            { cart.map((prod) => <CartItem key={prod.id} prod={prod} {...cart}/>) }
             <h3>Total: ${total}</h3>
             <button onClick={() => clearCart()} className="button is-primary">Limpiar Carrito</button>
             <Link to='/checkout' className='card-footer-item'>Checkout</Link>

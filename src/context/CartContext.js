@@ -9,8 +9,6 @@ export const CartProvider = ({ children, item }) => {
 
     const [cart, setCart] = useState([])
 
-    
-
     console.log(cart);
 
     const addItem = (item , quantity) =>{
@@ -34,17 +32,15 @@ export const CartProvider = ({ children, item }) => {
         return cart.some(prod => prod.id === itemId)
     }
 
+    const totalQuantity = () =>cart.reduce((acumulador, itemsActual)=> acumulador + itemsActual.quantity, 0)
     
-    const totalQuantity = (quantityAdded) =>{
-        totalQuantity+= quantityAdded
+
+    const total = () =>{
+        return cart.reduce((prev, act)=> prev + act.quantity * act.price,0)
     }
 
-    const total = cart.reduce((resultado, quantityAdded)=> {return(resultado +
-        quantityAdded*item.price);},0);
-    
-
     return(
-        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, total, totalQuantity, isInCart }}>
             {children}
         </CartContext.Provider>
     )

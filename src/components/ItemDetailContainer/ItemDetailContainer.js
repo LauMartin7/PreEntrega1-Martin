@@ -22,12 +22,12 @@ const ItemDetailContainer = () => {
         getDocs(docRef)
             .then(response =>{
                 //const data = response.data()
-                const productsAdapted = response.docs.map(doc=>{
+                const productAdapted = response.docs.map(doc=>{
                     const data = doc.data()
                     return { id: doc.id, ...data}
                 })
                 //{id: response.id, ...data}
-                setProduct(productsAdapted)
+                setProduct(productAdapted)
             })
             .catch(error =>{
                 console.error(error)
