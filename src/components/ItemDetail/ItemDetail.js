@@ -4,7 +4,7 @@ import { useContext, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
-//falta un map como el item list o no pq pasa ya con ...
+
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0);

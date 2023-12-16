@@ -2,25 +2,18 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import React from 'react'
 
-const CartItem = ({prod}) =>{
+const CartItem = ({name, quantity, price, id}) =>{
 
-    //item, quantityAdded
-    //{title, price , id , quantity} el companiero y asi lo cambio el profe,
-    //sino sacar la imagen que al final la saco
     const {removeItem} = useContext(CartContext)
 
     return(
-        <span className='columns'>
-            <picture className='image is-4by3'>
-                    <img src={prod.img} alt={prod.name} className='ItemImg'/>
-            </picture>
-            <div className='column is-2'>
-                <h2 className='title is-5'>{prod.name}</h2>
-                <p>Cantidad:{prod.quantity}</p>
-                <p>Subtotal: ${prod.quantity * prod.price}</p>
-                <button onclick={() => removeItem(prod.id)}>Eliminar</button> 
-            </div>
-        </span>
+        <div className="text-white flex justify-around">
+            <h4 className='title is-5'>{name}</h4>
+            <p>Cantidad:{quantity}</p>
+            <p>Precio X unidad: ${price}</p>
+            <p>Subtotal: ${quantity * price}</p>
+            <button onclick={() => removeItem(id)}>Eliminar</button> 
+        </div>
     )
 }
 

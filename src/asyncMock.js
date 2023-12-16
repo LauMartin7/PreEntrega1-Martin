@@ -1,4 +1,4 @@
-/*
+
 const products =[
     {id: '1',
     name: 'Moisés blanco y negro',
@@ -187,4 +187,3 @@ export const getProductsByCategory = (categoryId) => {
     })
 
 }
-*/
