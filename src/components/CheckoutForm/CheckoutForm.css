@@ -1,0 +1,40 @@
+.input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(25, 167, 206);
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.label{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items:baseline; 
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form{
+    background-color: rgb(175, 211, 226);
+    width: 40%;
+    height: 300px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button{
+    background-color: rgb(246, 241, 241);
+    padding: 6px 8px;
+    margin-top: 20px;
+    border: 2px solid rgb(20, 108, 148);
+    border-radius: 7px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: rgb(20, 108, 148);
+}

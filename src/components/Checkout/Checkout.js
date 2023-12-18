@@ -5,6 +5,7 @@ import { getDocs, collection, query, where, addDoc, documentId} from "firebase/f
 import { db } from "../../config/firebase";
 import { useState } from "react";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import './Checkout.css';
 
 const Checkout = ()  =>{
 
@@ -55,7 +56,7 @@ const Checkout = ()  =>{
             if(outOfStock.length === 0){
                 await batch.commit()
 
-                const orderRef = collection(db, 'orders')
+                const orderRef = collection(db, "orders")
 
                 const orderAdded = await addDoc(orderRef, objOrder)
 
@@ -73,10 +74,10 @@ const Checkout = ()  =>{
     }
 
     if(loading){
-        return <h1>Se está generando su orden...</h1>
+        return <h2>Se está generando su orden...</h2>
     }
     if(orderId){
-        return <h1>El id de su orden es: {orderId}</h1>
+        return <h2>El id de su orden es: {orderId}</h2>
     }
 
     return(

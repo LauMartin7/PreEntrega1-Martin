@@ -9,7 +9,6 @@ export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
-    console.log(cart);
 
     const addItem = (item , quantity) =>{
         if(!isInCart(item.id)){
@@ -32,8 +31,10 @@ export const CartProvider = ({ children }) => {
         return cart.some(prod => prod.id === itemId)
     }
 
-    //CAMBIO , ANTES ((acumulador, itemsActual)=> acumulador + itemsActual.quantity, 0)
-    const totalQuantity = () =>cart.reduce((acumulador, quantity)=> acumulador + quantity, 0)
+
+    const totalQuantity = () => {
+        return cart.reduce((acumulador, prev)=> acumulador + prev.quantity, 0)
+    }
     
     const total = () =>{
         return cart.reduce((prev, act)=> prev + act.quantity * act.price,0)

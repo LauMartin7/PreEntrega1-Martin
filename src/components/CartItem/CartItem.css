@@ -1,0 +1,44 @@
+.informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cartColumns{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #66a096;
+}
+
+.headerCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloCart{
+    font-family: 'Agbalumo';
+    color: #66a096;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.botonEliminar{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    border-radius: 20px;
+    background-color: cadetblue;
+    padding: 7px;
+    width: 120px;
+    color:aliceblue;
+    border:none;
+}
+
+.informacion p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
