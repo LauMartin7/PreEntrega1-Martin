@@ -10,10 +10,11 @@ import './Checkout.css';
 const Checkout = ()  =>{
 
     const [loading, setLoading] = useState(false)
-    const [orderId, setorderId] = useState('')
+    const [orderId, setOrderId] = useState('')
 
     const { cart, total, clearCart } = useContext(CartContext)
 
+    const totalCarrito = total()
     const createOrder = async ({name, phone, mail})=>{
         setLoading(true)
 
@@ -23,7 +24,7 @@ const Checkout = ()  =>{
                     name, phone, mail
                 },
                 items: cart,
-                total: total,
+                total: totalCarrito,
                 date: Timestamp.fromDate(new Date())
             }
 
@@ -60,7 +61,7 @@ const Checkout = ()  =>{
 
                 const orderAdded = await addDoc(orderRef, objOrder)
 
-                setorderId(orderAdded.id)
+                setOrderId(orderAdded.id)
                 clearCart()
             } else {
                 console.error('hay productos que estan fuera de stock')
