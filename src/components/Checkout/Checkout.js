@@ -7,6 +7,7 @@ import { useState } from "react";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import './Checkout.css';
 
+
 const Checkout = ()  =>{
 
     const [loading, setLoading] = useState(false)
@@ -15,13 +16,13 @@ const Checkout = ()  =>{
     const { cart, total, clearCart } = useContext(CartContext)
 
     const totalCarrito = total()
-    const createOrder = async ({name, phone, mail})=>{
+    const createOrder = async ({name, phone, mail, password, mailGoogle})=>{
         setLoading(true)
 
         try{
             const objOrder = {
                 buyer:{
-                    name, phone, mail
+                    name, phone, mail, password, mailGoogle
                 },
                 items: cart,
                 total: totalCarrito,
@@ -45,7 +46,7 @@ const Checkout = ()  =>{
                 const stockDb = dataDoc.stock
 
                 const productAddedToCart = cart.find(prod => prod.id === doc.id)
-                const prodQuantity = productAddedToCart?.prodQuantity
+                const prodQuantity = productAddedToCart?.quantity
 
                 if(stockDb >= prodQuantity){
                     batch.update(doc.ref, { stock: stockDb - prodQuantity})
@@ -74,11 +75,17 @@ const Checkout = ()  =>{
         }
     }
 
+
     if(loading){
         return <h2>Se está generando su orden...</h2>
     }
     if(orderId){
-        return <h2>El id de su orden es: {orderId}</h2>
+        return (
+            <div>
+                <h2>Gracias por su compra! Enviamos a su mail los datos de su orden</h2>
+                <h2>El id de su orden es: {orderId}</h2>
+            </div>
+        )
     }
 
     return(
