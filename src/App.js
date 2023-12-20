@@ -10,7 +10,7 @@ import imgTarjetaCategory from "./img/tarjetas.jpg";
 import { CartProvider } from './context/CartContext';
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
-
+import imgV from "./img/animalitosVerde.png";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer imgB={imgTarjetaCategory} greeting='ENVIO GRATIS en Cba Capital' oferta='30% de descuento EFECTIVO/TRANSFERENCIA'/>}/>
             <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
             <Route path="/cart" element={<Cart/>}/>
-            <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="/checkout" element={<Checkout imgB={imgV}/>}/>
             <Route path="*" element={<h1>404 NOT FOUND</h1>}/>
           </Routes>
         </CartProvider>

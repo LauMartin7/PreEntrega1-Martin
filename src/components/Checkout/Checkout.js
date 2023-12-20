@@ -8,7 +8,7 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import './Checkout.css';
 
 
-const Checkout = ()  =>{
+const Checkout = ({imgB})  =>{
 
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState('')
@@ -77,20 +77,26 @@ const Checkout = ()  =>{
 
 
     if(loading){
-        return <h2>Se está generando su orden...</h2>
+        return <h2 className="mjeCheckout">Se está generando su orden...</h2>
     }
     if(orderId){
         return (
-            <div>
-                <h2>Gracias por su compra! Enviamos a su mail los datos de su orden</h2>
-                <h2>El id de su orden es: {orderId}</h2>
+            <div className="columns is-vcentered">
+                <div className="column is-2"></div>
+                <div className="column is-6">
+                    <h2 className="mjeCheckout">Gracias por su compra! Puede hacer el seguimiento de su pedido via mail</h2>
+                    <h2 className="mjeCheckout">El id de su orden es: {orderId}</h2>
+                </div>
+                <figure className="column image is-2">
+                    <img src={imgB} className="imgCorazon" alt="corazon"/>
+                </figure>
             </div>
         )
     }
 
     return(
         <div>
-            <h1>Checkout</h1>
+            <h1 className="titleCheckout">Checkout</h1>
             <CheckoutForm onConfirm={createOrder}/>
         </div>
     )

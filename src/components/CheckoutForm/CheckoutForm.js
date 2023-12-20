@@ -32,11 +32,14 @@ const CheckoutForm = ({ onConfirm }) =>{
     return(
         <div className="container">
             <form onSubmit={handleConfirm} className="form">
-                <h2>SIGN IN</h2>
-                <button onClick={signInWithGoogle}>Ingresar con Google</button>
-                <span>Usuario: {auth?.currentUser?.email}</span>
-                <button onClick={logOut}>Cerrar sesión</button>
-                <h2>SIGN UP</h2>
+                <h2 className="subtituloForm">SIGN IN</h2>
+                <div className="columns is-vcentered">
+                    <button className="btnLog column is-7" onClick={signInWithGoogle}>Ingresar con Google</button>
+                    <div className="column is-1"></div>
+                    <button className="btnLog column is-5" onClick={logOut}>Cerrar sesión</button>
+                </div>
+                <span className="spanForm">Usuario: {auth?.currentUser?.email}</span>
+                <h2 className="subtituloForm">SIGN UP</h2>
                 <label className="label">
                     Nombre
                     <input
