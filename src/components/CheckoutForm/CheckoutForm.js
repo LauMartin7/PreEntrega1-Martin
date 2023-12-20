@@ -44,7 +44,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Nombre
                     <input
                     className="input"
-                    type="text"
+                    type="text" required
                     value={name}
                     onChange={({ target }) => setName(target.value)}
                     />
@@ -53,7 +53,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Telefono
                     <input
                     className="input"
-                    type="text"
+                    type="text" 
                     value={phone}
                     onChange={({ target }) => setPhone(target.value)}
                     />
@@ -62,7 +62,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Email
                     <input
                     className="input"
-                    type="email"
+                    type="email" required
                     value={mail}
                     onChange={({ target }) => setMail(target.value)}
                     />
@@ -71,7 +71,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Password
                     <input
                     className="input"
-                    type="password"
+                    type="password" required
                     value={password}
                     onChange={({ target }) => setPassword(target.value)}
                     />

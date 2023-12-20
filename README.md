@@ -1,3 +1,27 @@
+<em>Babyland</em>
+<h1>Tienda on-line de articulos para bebés</h1>
+
+<div>
+<h2>Funcionalidades</h2>
+<p>Inicio con render de todos los productos</p>
+<p>Link al detalle de cada uno para ampliar descripcion</p>
+<p>icono del carrito con items agregados</p
+<p>Agregar al carrito de compras según el stock hasta terminar compra que redirecciona a la ruta del carrito</p>
+<p>Carrito de compras:limpiar carrito, eliminar item, subtotal, total</p>
+<p>Link a checkout donde se puede loguear/desloguear con Google o con Auth de Firebase, se guardan los datos de los usuarios y de su carrito de compras asociado en una colección de Firestore</p>
+<p>Mje de despedida con render del id de la compra</p>
+</div>
+
+<div>
+<h2>Tecnologias utilizadas</h2>
+<p>REACT</p>
+<p>Bulma</p>
+<p>Firebase/Firestore</p>
+</div>
+
+<h2>Acceso al proyecto</h2>
+<p></p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
