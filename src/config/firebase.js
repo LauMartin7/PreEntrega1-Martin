@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_apiKey,
+    apiKey: "process.env.REACT_APP_apiKey",
     authDomain: "babyland-542b7.firebaseapp.com",
     projectId: "babyland-542b7",
     storageBucket: "babyland-542b7.appspot.com",

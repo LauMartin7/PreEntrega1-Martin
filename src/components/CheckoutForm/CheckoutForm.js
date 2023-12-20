@@ -12,7 +12,8 @@ const CheckoutForm = ({ onConfirm }) =>{
     const handleConfirm = (event) =>{
         event.preventDefault()
 
-        const mailGoogle=  auth?.currentUser?.email
+        const mailGoogle= auth?.currentUser?.email
+
         const userData ={
             name, phone, mail, password, mailGoogle
         }
@@ -44,7 +45,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Nombre
                     <input
                     className="input"
-                    type="text" required
+                    type="text" 
                     value={name}
                     onChange={({ target }) => setName(target.value)}
                     />
@@ -52,7 +53,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                 <label className="label">
                     Telefono
                     <input
-                    className="input"
+                    className="input" 
                     type="text" 
                     value={phone}
                     onChange={({ target }) => setPhone(target.value)}
@@ -62,7 +63,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Email
                     <input
                     className="input"
-                    type="email" required
+                    type="email" 
                     value={mail}
                     onChange={({ target }) => setMail(target.value)}
                     />
@@ -71,7 +72,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                     Password
                     <input
                     className="input"
-                    type="password" required
+                    type="password" 
                     value={password}
                     onChange={({ target }) => setPassword(target.value)}
                     />

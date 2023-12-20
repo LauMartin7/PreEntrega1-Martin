@@ -60,7 +60,13 @@ const Checkout = ({imgB})  =>{
 
                 const orderRef = collection(db, "orders")
 
-                const orderAdded = await addDoc(orderRef, objOrder)
+                //a continuacion 2 lineas de codigo que hice y se que no tiene sentido
+                // pero Firebase me daba un error
+                //que se soluciono asi segun stack overflow:
+                const string = JSON.stringify(objOrder);
+                const objOrden = JSON.parse(string)
+
+                const orderAdded = await addDoc(orderRef, objOrden)
 
                 setOrderId(orderAdded.id)
                 clearCart()
