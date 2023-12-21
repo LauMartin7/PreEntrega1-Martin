@@ -7,8 +7,8 @@
 <p>Link al detalle de cada uno para ampliar descripcion</p>
 <p>icono del carrito con items agregados</p
 <p>Agregar al carrito de compras según el stock hasta terminar compra que redirecciona a la ruta del carrito</p>
-<p>Carrito de compras:limpiar carrito, eliminar item, subtotal, total</p>
-<p>Link a checkout donde se puede loguear/desloguear con Google o con Auth de Firebase, se guardan los datos de los usuarios y de su carrito de compras asociado en una colección de Firestore</p>
+<p>Carrito de compras:limpiar carrito, eliminar item, cantidad, precio, subtotal, total</p>
+<p>Link a checkout donde se puede loguear/desloguear con Auth de Firebase, se guardan los datos de los usuarios y de su carrito de compras asociado en una colección de Firestore</p>
 <p>Mje de despedida con render del id de la compra</p>
 </div>
 
