@@ -20,7 +20,7 @@
 </div>
 
 <h2>Acceso al proyecto</h2>
-<p></p>
+<p>https://gleaming-queijadas-42fe60.netlify.app/</p>
 
 # Getting Started with Create React App
 
