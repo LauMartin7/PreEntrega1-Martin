@@ -16,13 +16,13 @@ const Checkout = ({imgB})  =>{
     const { cart, total, clearCart } = useContext(CartContext)
 
     const totalCarrito = total()
-    const createOrder = async ({name, phone, mail, password, mailGoogle})=>{
+    const createOrder = async ({name, phone, email, password})=>{
         setLoading(true)
 
         try{
             const objOrder = {
                 buyer:{
-                    name, phone, mail, password, mailGoogle
+                    name, phone, email, password
                 },
                 items: cart,
                 total: totalCarrito,
@@ -60,13 +60,7 @@ const Checkout = ({imgB})  =>{
 
                 const orderRef = collection(db, "orders")
 
-                //a continuacion 2 lineas de codigo que hice y se que no tiene sentido
-                // pero Firebase me daba un error
-                //que se soluciono asi segun stack overflow:
-                const string = JSON.stringify(objOrder);
-                const objOrden = JSON.parse(string)
-
-                const orderAdded = await addDoc(orderRef, objOrden)
+                const orderAdded = await addDoc(orderRef, objOrder)
 
                 setOrderId(orderAdded.id)
                 clearCart()
@@ -81,17 +75,17 @@ const Checkout = ({imgB})  =>{
         }
     }
 
-
     if(loading){
-        return <h2 className="mjeCheckout">Se está generando su orden...</h2>
+        return <h2 className="mjeCheckout">Aguarde unos instantes por favor...</h2>
     }
     if(orderId){
         return (
             <div className="columns is-vcentered">
                 <div className="column is-2"></div>
                 <div className="column is-6">
-                    <h2 className="mjeCheckout">Gracias por su compra! Puede hacer el seguimiento de su pedido via mail</h2>
-                    <h2 className="mjeCheckout">El id de su orden es: {orderId}</h2>
+                    <h2 className="mjeCheckout">Gracias por su compra!</h2>
+                    <h2 className="mjesCheckout">Puede hacer el seguimiento de su pedido via mail</h2>
+                    <h2 className="mjesCheckout">El id de su orden es: {orderId}</h2>
                 </div>
                 <figure className="column image is-2">
                     <img src={imgB} className="imgCorazon" alt="corazon"/>

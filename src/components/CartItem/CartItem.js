@@ -12,9 +12,7 @@ const CartItem = ({name, quantity, price, id, img}) =>{
             <div className="column"></div>
             <div className="headerCart column is-3">
                 <h4 className='tituloCart'>{name}</h4>
-                <figure className='image is-128x128'>
-                    <img src={img} alt={name}/>
-                </figure>
+                <img  className='image is-128x128' src={img} alt={name}/>
             </div>
             <div className="informacion column is-2">
                 <p>Cantidad:{quantity}</p>

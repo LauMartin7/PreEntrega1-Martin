@@ -1,9 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "process.env.REACT_APP_apiKey",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "babyland-542b7.firebaseapp.com",
     projectId: "babyland-542b7",
     storageBucket: "babyland-542b7.appspot.com",
@@ -15,5 +15,3 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 export const auth = getAuth(app);
-
-export const googleProvider = new GoogleAuthProvider();
